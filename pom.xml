@@ -45,12 +45,12 @@
       <artifactId>concordion</artifactId>
       <version>${concordion.version}</version>
       <scope>test</scope>
-      <exclusions>
+      <!-- exclusions>
         <exclusion>
           <groupId>xml-apis</groupId>
           <artifactId>xml-apis</artifactId>
         </exclusion>
-      </exclusions>
+      </exclusions> -->
     </dependency>
 
     <dependency>
@@ -99,7 +99,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <selenium.version>[2.43.0,)</selenium.version>
-    <concordion.version>1.4.4</concordion.version>
+    <concordion.version>2.0.0-SNAPSHOT</concordion.version>
     <screenshot-extension.version>1.1.2</screenshot-extension.version>
   </properties>
 </project>

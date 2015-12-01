@@ -8,18 +8,22 @@ wrapper {
 
 repositories {
     mavenCentral()
+    maven {
+        url "http://oss.jfrog.org/artifactory/simple/oss-snapshot-local/"
+    }
 }
 
 ext {
-	concordionVersion = "[1.4.4,)"
+	concordionVersion = "2.0.0-SNAPSHOT"
 	concordionScreenshotVersion = "[1.1.2,)"
+           concordionMarkdownVersion = "0.1.0"
 	seleniumVersion = "[2.43,)"
-	slf4jVersion = "1.6.1"
 }
 
 dependencies {
     testCompile "org.concordion:concordion:$concordionVersion",
                 "org.concordion:concordion-screenshot-extension:$concordionScreenshotVersion",
+                "org.concordion:concordion-markdown-extension:$concordionMarkdownVersion",
                 "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
 }
 

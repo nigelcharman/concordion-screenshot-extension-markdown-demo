@@ -1,8 +1,9 @@
 package org.concordion.ext.demo.selenium;
 
-import org.concordion.api.ExpectedToFail;
 import org.concordion.api.extension.ConcordionExtension;
 import org.concordion.api.extension.Extension;
+import org.concordion.api.extension.Extensions;
+import org.concordion.ext.MarkdownExtension;
 import org.concordion.ext.ScreenshotExtension;
 import org.concordion.ext.demo.selenium.web.GoogleResultsPage;
 import org.concordion.integration.junit4.ConcordionRunner;
@@ -25,13 +26,16 @@ import org.junit.runner.RunWith;
  * doesn't special case the answer to life, the universe and everything.
  */
 @RunWith(ConcordionRunner.class)
-@ExpectedToFail
+@Extensions(MarkdownExtension.class)
 public class ScreenshotDemo extends GoogleFixture {
 	
     private SeleniumScreenshotTaker screenshotTaker = new SeleniumScreenshotTaker(browser.getDriver());
     
     @Extension
     public ConcordionExtension extension = new ScreenshotExtension().setScreenshotTaker(screenshotTaker);
+    
+//    @Extension
+//    public ConcordionExtension markdownExtension = new MarkdownExtension().withInterimHtmlSavedTo(new FileTarget(new File("/tmp/tt.html")));
     
  	private GoogleResultsPage resultsPage; 
 
