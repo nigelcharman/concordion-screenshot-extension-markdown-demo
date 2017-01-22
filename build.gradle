@@ -8,27 +8,26 @@ wrapper {
 
 repositories {
     mavenCentral()
-    maven {
-        url "http://oss.jfrog.org/artifactory/simple/oss-snapshot-local/"
-    }
 }
 
 ext {
-	concordionVersion = "2.0.0-SNAPSHOT"
+	concordionVersion = "2.0.0"
 	concordionScreenshotVersion = "[1.1.2,)"
-           concordionMarkdownVersion = "0.1.0"
 	seleniumVersion = "[2.43,)"
 }
 
 dependencies {
     testCompile "org.concordion:concordion:$concordionVersion",
                 "org.concordion:concordion-screenshot-extension:$concordionScreenshotVersion",
-                "org.concordion:concordion-markdown-extension:$concordionMarkdownVersion",
-                "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
+                "org.seleniumhq.selenium:selenium-java:$seleniumVersion",
+                'org.springframework:spring-context:4.2.4.RELEASE',
+                'org.springframework:spring-test:4.2.4.RELEASE',
+                'org.chiknrice:concordion-spring-runner:0.0.1'
 }
 
 test {
     include '**/ScreenshotDemo.*'
+    testLogging.showStandardStreams = true
     systemProperties['concordion.output.dir'] = "$reporting.baseDir/spec"
     outputs.upToDateWhen { false } // force it to run even if test code hasn't changed
 }

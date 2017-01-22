@@ -1,8 +1,8 @@
-package org.concordion.ext.demo.selenium;
+package org.concordion.petclinic;
 
-import org.concordion.ext.demo.selenium.web.Browser;
-import org.concordion.ext.demo.selenium.web.GoogleSearchPage;
 import org.concordion.integration.junit4.ConcordionRunner;
+import org.concordion.petclinic.web.Browser;
+import org.concordion.petclinic.web.GoogleSearchPage;
 import org.junit.After;
 import org.junit.runner.RunWith;
 

@@ -1,12 +1,11 @@
-package org.concordion.ext.demo.selenium;
+package org.concordion.petclinic;
 
 import org.concordion.api.extension.ConcordionExtension;
 import org.concordion.api.extension.Extension;
 import org.concordion.api.extension.Extensions;
-import org.concordion.ext.MarkdownExtension;
 import org.concordion.ext.ScreenshotExtension;
-import org.concordion.ext.demo.selenium.web.GoogleResultsPage;
 import org.concordion.integration.junit4.ConcordionRunner;
+import org.concordion.petclinic.web.GoogleResultsPage;
 import org.concordion.selenium.SeleniumScreenshotTaker;
 import org.junit.runner.RunWith;
 
@@ -26,7 +25,6 @@ import org.junit.runner.RunWith;
  * doesn't special case the answer to life, the universe and everything.
  */
 @RunWith(ConcordionRunner.class)
-@Extensions(MarkdownExtension.class)
 public class ScreenshotDemo extends GoogleFixture {
 	
     private SeleniumScreenshotTaker screenshotTaker = new SeleniumScreenshotTaker(browser.getDriver());

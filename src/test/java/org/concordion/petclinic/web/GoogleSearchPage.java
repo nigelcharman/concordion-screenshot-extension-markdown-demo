@@ -1,4 +1,4 @@
-package org.concordion.ext.demo.selenium.web;
+package org.concordion.petclinic.web;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

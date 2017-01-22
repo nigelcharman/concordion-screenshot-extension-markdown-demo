@@ -1,4 +1,4 @@
-package org.concordion.ext.demo.selenium.web;
+package org.concordion.petclinic.web;
 
 import java.util.List;
 import java.util.logging.Logger;
